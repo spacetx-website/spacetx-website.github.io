@@ -1,0 +1,77 @@
+{#
+    layout.html
+    ~~~~~~~~~~~~~~~~~
+
+    Sphinx layout template for spacetx-website.github.io.
+
+    :author: Jeongbin Park
+    :license: CC BY-SA
+#}
+{%- extends "!layout.html" %}
+{%- set rellinks = [] %}
+
+{%- block htmltitle %}
+<title>{{ shorttitle|e }}</title>
+{%- endblock %}
+
+{%- block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+{{- css() }}
+{%- endblock %}
+
+{% block header %}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ pathto('index') }}">SpaceTx</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li><a class="nav-link" href="{{ pathto('topics') }}">Topics</a></li>
+          <li><a class="nav-link" href="{{ pathto('examples') }}">Examples and Code</a></li>
+          <li><a class="nav-link" href="{{ pathto('contribute') }}">Contributing Guidelines</a></li>
+        </ul>
+        <form class="d-flex" action="{{ pathto('search') }}" method="get">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+          <button class="btn btn-outline-success" type="submit">{{ _('Search') }}</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block content %}
+    <div id="wrapper" class="container-fluid">
+      <div id="main" class="row">
+        <div id="content" class="col-md-9">
+          <div class="container-fluid">
+            {%- block document %}
+            {{ super() }}
+            {%- endblock %}
+          </div>
+        </div>
+        <div id="sidebar" class="col-md-3">
+          <div class="container-fluid">
+            <h3>Navigation</h3>
+            {{ toctree(maxdepth=2, collapse=False) }}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+  <div id="footer">
+    <p>
+      © 2021 SpaceTx consortium<br>
+    </p>
+  </div>
+{% endblock %}
+
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}

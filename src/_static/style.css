@@ -1,0 +1,48 @@
+body, html {
+    font-family: Montserrat;
+}
+
+.headerlink {
+	display: none;
+}
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink,
+h4:hover .headerlink,
+h5:hover .headerlink,
+h6.hover .headerlink {
+	display: inline-block;
+}
+
+.landing {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+      ), url('space.jpg') no-repeat center;
+    height: 300px;
+}
+
+.landing-text {
+    color: #fff;
+    text-align: center;
+    font-size: 24pt;
+    font-family: Roboto;
+    font-weight: 300;
+    padding-top: 80px;
+}
+
+#wrapper {
+    margin-top: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+}
+
+#footer {
+    margin-top: 50px;
+}
+
+#footer p {
+    text-align: center;
+}

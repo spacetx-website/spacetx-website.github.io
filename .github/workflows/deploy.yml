@@ -1,0 +1,34 @@
+name: deploy website
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+  push:
+    branches: [ source ]
+  pull_request:
+    branches: [ source ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Build
+        run: |
+          sudo pip3 install sphinx recommonmark
+          sphinx-build src build
+      - name: Deploy
+        if: github.ref == 'refs/heads/source'
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true
