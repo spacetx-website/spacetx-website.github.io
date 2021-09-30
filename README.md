@@ -2,15 +2,31 @@
 
 ## How to build website locally
 
-1. Install required packages
+1. Install Pandoc
+
+If you use Conda,
+
 ```
-pip install sphinx recommonmark
+conda install pandoc
 ```
 
-2. Build website.
+or
+
+```
+sudo apt install pandoc
+```
+
+2. Install required python packages
+```
+pip install sphinx recommonmark ipython nbsphinx
+```
+
+3. Build website.
 ```
 sphinx-build src build
 ```
+
+And find the result in `build` directory.
 
 ## How to add a new page
 
