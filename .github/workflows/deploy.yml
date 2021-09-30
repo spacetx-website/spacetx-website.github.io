@@ -22,7 +22,9 @@ jobs:
           python-version: '3.x'
       - name: Build
         run: |
-          sudo pip3 install sphinx recommonmark nbsphinx
+          ${CONDA}/bin/conda activate base
+          ${CONDA}/bin/conda install python pandoc
+          pip install sphinx recommonmark nbsphinx ipython
           sphinx-build src build
       - name: Deploy
         if: github.ref == 'refs/heads/source'

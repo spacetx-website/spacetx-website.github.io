@@ -44,6 +44,7 @@ release = ''
 extensions = [
     'sphinx.ext.githubpages',
     'recommonmark',
+    'nbsphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -103,11 +104,3 @@ html_style = "style.css"
 # html_sidebars = {}
 
 html_additional_pages = {'index': 'index.html'}
-
-# -- Extension configuration -------------------------------------------------
-def setup(app):
-    app.add_config_value('recommonmark_config', {
-            'url_resolver': lambda url: github_doc_root + url,
-            'auto_toc_tree_section': 'Contents',
-            }, True)
-    app.add_transform(AutoStructify)
