@@ -21,7 +21,9 @@ jobs:
         with:
           python-version: '3.x'
       - name: Build
+        shell: bash -l {0}
         run: |
+          ${CONDA}/bin/conda init bash
           ${CONDA}/bin/conda activate base
           ${CONDA}/bin/conda install python pandoc
           pip install sphinx recommonmark nbsphinx ipython
