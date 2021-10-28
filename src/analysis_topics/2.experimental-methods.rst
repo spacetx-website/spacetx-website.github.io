@@ -1,0 +1,4 @@
+Experimental Methods
+====================
+.. image:: crop_methods.png
+  :width: 800
