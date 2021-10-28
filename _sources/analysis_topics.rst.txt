@@ -5,4 +5,4 @@ Topics
    :maxdepth: 1   
    :glob:
    
-   topics/*
+   analysis_topics/*

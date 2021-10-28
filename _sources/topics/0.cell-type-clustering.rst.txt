@@ -1,4 +1,0 @@
-Cell Type Clustering
-====================
-
-The github repo: https://github.com/spacetx-spacejam
