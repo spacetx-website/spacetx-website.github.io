@@ -1,30 +1,30 @@
 {%- extends "layout.html" %}
 
-{%- block content %}
-<div class="landing">
-    <p class="landing-text">SpaceTx: experimental and computational methods comparison for spatially resolved transcriptomics</p>
+{%- block cover %}
+<div class="cover-top" style="background-image: url('/_static/index-top.jpg');">
+    <p class="cover-text">
+        SpaceTx: experimental and computational methods<br>comparison for spatially resolved transcriptomics
+    </p>
 </div>
-{{ super() }}
 {%- endblock %}
 
 {%- block document %}
-<h3>Abstract</h3>
-<p>
-Mapping spatial distributions of molecularly defined cell types is essential in the brain, with its exceptional
-cellular heterogeneity and the functional significance of spatial organization.  To address this issue, several
+<p>Mapping spatial distributions of molecularly defined cell types is essential in the brain, with its exceptional
+cellular heterogeneity and the functional significance of spatial organization. To address this issue, several
 multiplex FISH or in situ RNA sequencing methods have been developed in parallel, each using different experimental
-and computational protocols, with different trade-offs and optimizations.  Here, we present the results of the
-SpaceTx Consortium, including a direct comparison of six different matched experiments performed in mouse primary
-visual cortex.  Following cell type analysis of single cell transcriptomics data in the same brain region, we
-tailored a range of gene panels specifically to solve the problem of mapping imaged cells to known transcriptomic
-types. We summarize the performance of each method in the context of this experiment, compare their outputs and
-present results for the spatial distribution of gene expression and cell types.  We present a meta-analysis of
+and computational protocols, with different trade-offs and optimizations.</p>
+<p>We present the results of the SpaceTx Consortium, including a direct comparison of six different matched experiments
+performed in mouse primary visual cortex. Following cell type analysis of single cell transcriptomics data in the same
+brain region, we tailored a range of gene panels specifically to solve the problem of mapping imaged cells to known
+transcriptomic types.</p>
+<p>We summarize the performance of each method in the context of this experiment, compare their outputs and
+present results for the spatial distribution of gene expression and cell types. We present a meta-analysis of
 methodological similarities and differences between experimental protocols and the resulting cell type assignments
-and measurements of their abundance and spatial distribution. By comparing various methods to determine the
+and measurements of their abundance and spatial distribution.</p>
+<p>By comparing various methods to determine the
 transcriptomic type of individual cells (“cell type mapping”), we show that cell type mapping methods are a
 critical point for further research as spatial transcriptomic methods become more widely available. We also present
 the consortium’s successful efforts to address critical issues such as the standardization of computational analysis
-and file formats, cell segmentation, cell type assignment, and big data visualization.  All data and analyses from
-this consortium are publicly available.
-</p>
+and file formats, cell segmentation, cell type assignment, and big data visualization. All data and analyses from
+this consortium are publicly available.</p>
 {%- endblock %}

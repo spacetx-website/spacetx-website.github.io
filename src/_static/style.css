@@ -1,5 +1,17 @@
 body, html {
-    font-family: Montserrat;
+    font-family: Roboto;
+    font-size: 13pt;
+    line-height: 2;
+    color: #333;
+}
+
+a {
+    color: #0d75f8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .headerlink {
@@ -14,21 +26,58 @@ h6.hover .headerlink {
 	display: inline-block;
 }
 
-.landing {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.4), 
-        rgba(0, 0, 0, 0.4)
-      ), url('space.jpg') no-repeat center;
-    height: 300px;
+#main-navbar {
+    position: absolute;
+    backface-visibility: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) !important;
+    border-bottom: 0 !important;
 }
 
-.landing-text {
+#main-logo {
+    height: 55px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.cover-top {
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover-text {
     color: #fff;
     text-align: center;
-    font-size: 24pt;
+    font-size: 40pt;
     font-family: Roboto;
-    font-weight: 300;
-    padding-top: 80px;
+    font-weight: 500;
+    padding-top: 200px;
+    line-height: 1.5;
+}
+
+#carousel-image1 {
+    background-image: url('hackathon1.jpg');
+}
+
+#carousel-image2 {
+    background-image: url('hackathon2.jpg');
+}
+
+#carousel-image3 {
+    background-image: url('hackathon3.jpg');
+}
+
+#people-top {
+    background-image: url('everyone.jpg');
+    height: 800px !important;
+}
+
+.spacer {
+    height: 81px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #wrapper {
@@ -40,9 +89,48 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-    margin-top: 50px;
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #555;
+    color: #fff;
 }
 
 #footer p {
+    padding-top: 350px;
     text-align: center;
+}
+
+#footer a {
+    color: #fff;
+}
+
+#footer ul {
+    line-height: 1;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+#footer li {
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    width: 20%;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+#footer ul li ul {
+    position: absolute;
+    margin-top: 1rem;
+    left: 0;
+}
+
+#footer ul li ul li {
+    clear: both;
+    width: 100%;
+    font-weight: normal;
+    font-size: 9pt;
 }
