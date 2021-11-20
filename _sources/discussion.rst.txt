@@ -1,5 +1,5 @@
-Topics
-======
+Discussion
+==========
 
 .. toctree::
    :maxdepth: 1   
