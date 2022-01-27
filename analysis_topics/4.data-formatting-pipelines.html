@@ -22,8 +22,8 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Marker Gene Selection" href="1.marker-gene-selection.html" />
-    <link rel="prev" title="Topics" href="../analysis_topics.html" /> 
+    <link rel="next" title="Cell Type Mapping and Combined Results" href="5.cell-type-mapping-and-consensus.html" />
+    <link rel="prev" title="Cell Segmentation" href="3.segmentation.html" /> 
   </head><body>
   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -55,24 +55,15 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="cell-type-identification-in-single-cell-rnaseq-data">
-<h1>Cell Type Identification in single cell RNASeq data<a class="headerlink" href="#cell-type-identification-in-single-cell-rnaseq-data" title="Permalink to this headline">¶</a></h1>
-<p>The SpaceTx consortium chose the mouse visual cortex as the substrate for spatial transcriptomics comparisons. This was Consensus clustering</p>
-<p>Computational strategies:</p>
+  <section id="data-formatting-standards-and-computational-pipelines">
+<h1>Data Formatting Standards and Computational Pipelines<a class="headerlink" href="#data-formatting-standards-and-computational-pipelines" title="Permalink to this headline">¶</a></h1>
+<p>Background</p>
+<p>Many Spatial Transcriptomics methods are based on a common pattern of data acquisition: images are collected in multiple fluorescence channels after a round of readout chemistry, and this process is repeated until all fluorescent readouts have been imaged.  Similarly, the compuational processing pipelines to turn raw images into transcriptional profiles of cells share many computational steps. In this context, the SpaceTx Consortium pursued two software projects:</p>
 <ul class="simple">
-<li><p>(Eeshit DV) SIMLR (Single-cell Interpretation via Multi-kernel LeaRning) learns an appropriate distance metric for clustering and accounts for drop-outs.  Can also be run as a consensus clustering strategy. (<a class="reference external" href="https://github.com/BatzoglouLabSU/SIMLR">https://github.com/BatzoglouLabSU/SIMLR</a>).</p></li>
-<li><p>(Peter K) PAGODA (Pathway And Gene set Over-Dispersion Analysis) resolves multiple aspects of gene expression heterogeneity by testing gene sets for coordinated variability among measured cells                                                                             (<a class="reference external" href="http://hms-dbmi.github.io/scde/pagoda.html">http://hms-dbmi.github.io/scde/pagoda.html</a>).</p></li>
-<li><p>(Zizhen Y) scrattch.hicat (Hierarchical, Iterative Clustering for Analysis of Transcriptomics) iteratively repeats a multi-step approach on each cluster using different variable genes until no new clusters can be defined, then bootstraps the iterative process (<a class="reference external" href="https://github.com/AllenInstitute/scrattch.hicat">https://github.com/AllenInstitute/scrattch.hicat</a>).</p></li>
-<li><p>(Trygve B) - Precursor pipeline used for human MTG</p></li>
-<li><p>(Kenneth H) proMMT (Probabilistic Mixture Modeling for Transcriptomics) uses an EM algorithm to iteratively define clusters using the Bayesian information criterion and identify a sparse set of genes varying across clusters (Harris et al 2018; “Classes and continua…”; PLoS Biol.).</p></li>
+<li><p><a class="reference external" href="https://spacetx-starfish.readthedocs.io/en/latest/help_and_reference/spacetx-format/SpaceTxFormat/index.html#sptx-format">SpaceTx-Format</a> is a fully-specified format for image-based spatial transcriptomics raw data, including spatial structure of images in 3D, description of round-channel organization and a specification for the “codebook” relating fluorescence images to gene identity.</p></li>
+<li><p><a class="reference external" href="https://spacetx-starfish.readthedocs.io/en/latest/index.html">starfish</a> is a Python package that provides processing modules that can be assembled into completel processing pipelines to extract mRNA locations for barcode methods (MERFISH, SEQFISH), sequencing-based readouts (ISS, FISSEQ) and non-barcoded readouts (osmFISH).</p></li>
 </ul>
-<p>Most methods were run multiple times with different parameter settings.</p>
-<p>Cluster consensus:</p>
-<ul class="simple">
-<li><p>(Trygve B) - Cluster comparisons using Adjusted Rand, VI, etc. and showing which clusters subclasses /types are split more by various methods</p></li>
-<li><p>(Brian A) - Consensus mouse and human clusters were defined using clusterExperiment R library, which clusters the co-occurrence matrix (<a class="reference external" href="https://github.com/epurdom/clusterExperiment">https://github.com/epurdom/clusterExperiment</a>).</p></li>
-</ul>
-<p>Mouse clusters were defined on VISp + ALM data set and 68 ALM-specific clusters were removed from the consensus clustering, for 191 total clusters</p>
+<p>Both of these projects are housed in the <a class="reference external" href="https://github.com/spacetx/starfish">starfish github repo</a> and can be cited using the <a class="reference external" href="https://joss.theoj.org/papers/10.21105/joss.02440">starfish article in Journal of Open Source Software</a>.</p>
 </section>
 
 
@@ -88,11 +79,11 @@
     <div class="container">
       <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../analysis_topics.html">Topics</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Cell Type Identification in single cell RNASeq data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.marker-gene-selection.html">Marker Gene Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.experimental-methods.html">Experimental Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.segmentation.html">Cell Segmentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.data-formatting-pipelines.html">Data Formatting Standards and Computational Pipelines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Formatting Standards and Computational Pipelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.data-visualization.html">Data Visualization</a></li>
 </ul>

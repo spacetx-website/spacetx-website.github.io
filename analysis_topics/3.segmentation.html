@@ -22,7 +22,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Visualization" href="4.data-visualization.html" />
+    <link rel="next" title="Data Formatting Standards and Computational Pipelines" href="4.data-formatting-pipelines.html" />
     <link rel="prev" title="Experimental Methods" href="2.experimental-methods.html" /> 
   </head><body>
   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -55,35 +55,35 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="cell-type-mapping-and-combined-results">
-<h1>Cell Type Mapping and Combined Results<a class="headerlink" href="#cell-type-mapping-and-combined-results" title="Permalink to this headline">¶</a></h1>
-<ul>
-<li><p>Annotation of VISp area for mapping [Brian L / Christoffer]</p>
-<p>Cell locations were visualized in Napari <a class="reference external" href="https://napari.org">https://napari.org</a> and manually
-annotated to contain the largest possible area of primary visual cortex.
-Layers were manually annotated based on cell density and gene expression.</p>
-</li>
-<li><p>Cell Mapping strategies (including cell QC/filtering steps)</p>
+  <section id="cell-segmentation">
+<h1>Cell Segmentation<a class="headerlink" href="#cell-segmentation" title="Permalink to this headline">¶</a></h1>
+<p>Cell segmentation associates mRNA spot locations with individual cells, creating transcriptomic profiles that make up the cell-by-gene table.</p>
+<p><strong>Cell Segmentation Methods I:</strong></p>
+<p>Basic cell segmentation uses image data such as DAPI or PolyA images to define a spatial region for each cell.</p>
+<p>In the SpaceTx project, we developed DAPI-based nuclear segmentation method that was subsequently used for augmented cell segmentation methods described below.</p>
 <ul class="simple">
-<li><p>Baysor <a class="reference external" href="https://github.com/kharchenkolab/Baysor">https://github.com/kharchenkolab/Baysor</a> <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.10.05.326777v1">https://www.biorxiv.org/content/10.1101/2020.10.05.326777v1</a></p></li>
-<li><p>Jeremy’s method <a class="reference external" href="https://github.com/AllenInstitute/mfishtools/">https://github.com/AllenInstitute/mfishtools/</a></p></li>
-<li><p>Eeshit’s method [Eeshit]</p></li>
-<li><p>Renee’s method: Mapping spatially-defined cells to canonical cell types from scRNA-seq using FR-Match (including cell QC/filtering steps)</p></li>
-<li><p>pciSeq <a class="reference external" href="https://github.com/acycliq/pciSeq">https://github.com/acycliq/pciSeq</a></p></li>
-<li><p>Yilin’s method [Yilin]</p></li>
+<li><p>Oleh’s approach: feature based</p></li>
+<li><p>Luca’s approach: learning based</p></li>
 </ul>
-</li>
-<li><p>Combination of mapping results
-- negative weighting
-- geometric median</p></li>
-<li><p>Visium Data Single Cell Mapping</p>
+<p><strong>Cell Segmentation Methods II:</strong></p>
+<p>Augmented Cell Segmentation methods use additional information (beyond image data) to associate mRNA spot locations with individual cells [Viktor, Dimitris, others?]</p>
+<p>SpaceTx segmentation approach:</p>
+<ol class="arabic simple">
+<li><p>Segmentation of DAPI images to define nuclei</p></li>
+<li><p>Incorporate DAPI segmentation, mRNA spot tables and cluster annotations in Baysor alogrithm to create cell-by-gene tables.</p></li>
+<li><p>Create alternative segmentation using pciSeq to revise mRNA spot assignments</p></li>
+</ol>
 <ul class="simple">
-<li><p>Stereoscope</p></li>
-<li><p>Tangram</p></li>
+<li><dl class="simple">
+<dt>Summary of how Baysor works (Viktor)</dt><dd><ul>
+<li><p>Discuss the role of DAPI segmentation in these data sets- when does it help, when does it hurt?</p></li>
+<li><p>reference</p></li>
 </ul>
+</dd>
+</dl>
 </li>
+<li><p>Summary of how pciSeq works (Dimitris)</p></li>
 </ul>
-<p>The github repo: <a class="reference external" href="https://github.com/spacetx-spacejam">https://github.com/spacetx-spacejam</a></p>
 </section>
 
 
@@ -99,11 +99,13 @@ Layers were manually annotated based on cell density and gene expression.</p>
     <div class="container">
       <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../analysis_topics.html">Topics</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="0.cell-type-clustering.html">Cell Type Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.marker-gene-selection.html">Marker Gene Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.experimental-methods.html">Experimental Methods</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Cell Type Mapping and Combined Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.data-visualization.html">Data Visualization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cell Segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.data-formatting-pipelines.html">Data Formatting Standards and Computational Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.data-visualization.html">Data Visualization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples and Code</a><ul>
@@ -112,9 +114,10 @@ Layers were manually annotated based on cell density and gene expression.</p>
 <li class="toctree-l2"><a class="reference internal" href="../examples/2.consensus_msmfish.html">Multiplexed smFISH data SSAM analysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Data and Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../discussion.html">Discussion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../discussion/discussion.html">Discussion 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../discussion/discussion.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../discussion/related-projects.html">Related Projects and Ongoing Work</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing Guidelines</a></li>

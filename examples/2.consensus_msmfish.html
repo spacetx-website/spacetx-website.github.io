@@ -20,11 +20,11 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Results" href="../results.html" />
+    <link rel="next" title="Data and Results" href="../results.html" />
     <link rel="prev" title="Combined mapping results" href="1.combinded-mapping-results.html" /> 
   </head><body>
   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -267,7 +267,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -311,8 +311,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">from</span> <span class="nn">matplotlib_scalebar.scalebar</span> <span class="kn">import</span> <span class="n">ScaleBar</span>
 
@@ -328,8 +327,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cell_class_colors</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cell_class_colors</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Astro&quot;</span><span class="p">:</span> <span class="s2">&quot;#665C47&quot;</span><span class="p">,</span>
     <span class="s2">&quot;CR&quot;</span><span class="p">:</span> <span class="s2">&quot;#00FF66&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Endo&quot;</span><span class="p">:</span> <span class="s2">&quot;#8D6C62&quot;</span><span class="p">,</span>
@@ -362,8 +360,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[196]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">seg_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/baysor/allen_smfish/segmentation.csv&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seg_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/baysor/allen_smfish/segmentation.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -371,8 +368,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[202]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">spots</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/raw/smFISH_MCT_CZI_Panel_0_spot_table.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;gene&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;gene&#39;</span><span class="p">)</span>
 <span class="n">spots</span><span class="p">[</span><span class="s1">&#39;cell&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seg_df</span><span class="p">[</span><span class="s1">&#39;cell&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="n">um_per_pixel</span> <span class="o">=</span> <span class="mf">0.1</span>
@@ -387,8 +383,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[205]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;spacejam2/data/annotations/Allen_smFISH_annotations_geo.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">annotations</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)[</span><span class="s1">&#39;geometries&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">annotations</span><span class="p">[</span><span class="s2">&quot;coordinates&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -400,8 +395,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[206]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">spots</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">spots</span><span class="p">[</span><span class="n">spots</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;VISp&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spots</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">spots</span><span class="p">[</span><span class="n">spots</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;VISp&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -409,8 +403,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[208]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">beta</span> <span class="o">=</span> <span class="mf">3.65568224985292</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="mf">3.65568224985292</span>
 <span class="n">rotm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">beta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">beta</span><span class="p">)],</span> <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">beta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">beta</span><span class="p">)]])</span>
 <span class="n">pos_um</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">spots</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">spots</span><span class="o">.</span><span class="n">y</span><span class="p">])</span>
 <span class="n">rot_um</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">pos_um</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">rotm</span><span class="p">)</span>
@@ -423,8 +416,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[209]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">spots</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">rot_um</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spots</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">rot_um</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">spots</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">rot_um</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -433,8 +425,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[210]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">spots</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spots</span>
 </pre></div>
 </div>
 </div>
@@ -561,8 +552,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">ssam</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ssam</span>
 </pre></div>
 </div>
 </div>
@@ -570,8 +560,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ssam</span><span class="o">.</span><span class="n">SSAMDataset</span><span class="p">(</span><span class="s2">&quot;ssam_data/msmfish&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ssam</span><span class="o">.</span><span class="n">SSAMDataset</span><span class="p">(</span><span class="s2">&quot;ssam_data/msmfish&quot;</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">ssam</span><span class="o">.</span><span class="n">SSAMAnalysis</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">ncores</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -580,8 +569,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">spots</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">spots</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 <span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">spots</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 <span class="n">analysis</span><span class="o">.</span><span class="n">run_kde</span><span class="p">(</span><span class="n">locations</span><span class="o">=</span><span class="n">spots</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bandwidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
 </pre></div>
@@ -642,8 +630,7 @@ Saving KDE for gene Thsd7a...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">exp_thres</span> <span class="o">=</span> <span class="mf">0.027</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp_thres</span> <span class="o">=</span> <span class="mf">0.027</span>
 <span class="n">norm_thres</span> <span class="o">=</span> <span class="mf">0.2</span>
 </pre></div>
 </div>
@@ -652,8 +639,7 @@ Saving KDE for gene Thsd7a...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">analysis</span><span class="o">.</span><span class="n">find_localmax</span><span class="p">(</span><span class="n">search_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analysis</span><span class="o">.</span><span class="n">find_localmax</span><span class="p">(</span><span class="n">search_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -669,8 +655,7 @@ Found 5081 local max vectors.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">analysis</span><span class="o">.</span><span class="n">normalize_vectors</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analysis</span><span class="o">.</span><span class="n">normalize_vectors</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -687,8 +672,7 @@ Processing chunk 1 (of 1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cell_by_gene</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/jeremy_filtered/smFISH_filtered_cellxgene.csv&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cell_by_gene</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/jeremy_filtered/smFISH_filtered_cellxgene.csv&quot;</span><span class="p">)</span>
 <span class="n">cell_by_gene</span> <span class="o">=</span> <span class="n">cell_by_gene</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;gene_name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">genes</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -697,8 +681,7 @@ Processing chunk 1 (of 1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cell_by_gene</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cell_by_gene</span>
 </pre></div>
 </div>
 </div>
@@ -1022,8 +1005,7 @@ Processing chunk 1 (of 1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">normalize</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">normalize</span>
 <span class="c1">#cell_by_gene_normalized = ssam.run_sctransform(cell_by_gene.reset_index(drop=True), plot_model_pars=True)[0]</span>
 <span class="n">cell_by_gene_normalized</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">normalize</span><span class="p">(</span><span class="n">cell_by_gene</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s2">&quot;l1&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1033,8 +1015,7 @@ Processing chunk 1 (of 1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">calls_nwcs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;consensus_calls/renee/smFISH_filtered_combined_mapping_neg_weight_subclass.csv&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls_nwcs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;consensus_calls/renee/smFISH_filtered_combined_mapping_neg_weight_subclass.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1042,8 +1023,7 @@ Processing chunk 1 (of 1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniq_celltypes_nwcs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">calls_nwcs</span><span class="o">.</span><span class="n">subclass</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniq_celltypes_nwcs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">calls_nwcs</span><span class="o">.</span><span class="n">subclass</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 <span class="n">centroids_nwcs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">cell_type</span> <span class="ow">in</span> <span class="n">uniq_celltypes_nwcs</span><span class="p">:</span>
     <span class="n">centroids_nwcs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cell_by_gene_normalized</span><span class="p">[</span><span class="n">calls_nwcs</span><span class="o">.</span><span class="n">subclass</span> <span class="o">==</span> <span class="n">cell_type</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
@@ -1054,8 +1034,7 @@ Processing chunk 1 (of 1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[273]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">analysis</span><span class="o">.</span><span class="n">map_celltypes</span><span class="p">(</span><span class="n">centroids_nwcs</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analysis</span><span class="o">.</span><span class="n">map_celltypes</span><span class="p">(</span><span class="n">centroids_nwcs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1102,8 +1081,7 @@ Processing chunk (0/1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[274]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">analysis</span><span class="o">.</span><span class="n">filter_celltypemaps</span><span class="p">(</span><span class="n">min_norm</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">min_r</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analysis</span><span class="o">.</span><span class="n">filter_celltypemaps</span><span class="p">(</span><span class="n">min_norm</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">min_r</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1111,8 +1089,7 @@ Processing chunk (0/1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[271]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">map_colors_nwcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">cell_class_colors</span><span class="p">[</span><span class="n">ct</span><span class="p">]</span> <span class="k">for</span> <span class="n">ct</span> <span class="ow">in</span> <span class="n">uniq_celltypes_nwcs</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_colors_nwcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">cell_class_colors</span><span class="p">[</span><span class="n">ct</span><span class="p">]</span> <span class="k">for</span> <span class="n">ct</span> <span class="ow">in</span> <span class="n">uniq_celltypes_nwcs</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1120,8 +1097,7 @@ Processing chunk (0/1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[275]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
 <span class="n">ds</span><span class="o">.</span><span class="n">plot_celltypes_map</span><span class="p">(</span><span class="n">rotate</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">map_colors_nwcs</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Multiplexed smFISH - NWCS (SSAM)&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1147,8 +1123,7 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - NWCS (SSAM)&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">calls_gmcs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;consensus_calls/charles/smfish_jeremy_pciseq_renee_eeshit_gabriele_consensus_df.csv&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls_gmcs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;consensus_calls/charles/smfish_jeremy_pciseq_renee_eeshit_gabriele_consensus_df.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1156,8 +1131,7 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - NWCS (SSAM)&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniq_celltypes_gmcs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">calls_gmcs</span><span class="o">.</span><span class="n">subclass</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniq_celltypes_gmcs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">calls_gmcs</span><span class="o">.</span><span class="n">subclass</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 <span class="n">centroids_gmcs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">cell_type</span> <span class="ow">in</span> <span class="n">uniq_celltypes_gmcs</span><span class="p">:</span>
     <span class="n">centroids_gmcs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cell_by_gene_normalized</span><span class="p">[</span><span class="n">calls_gmcs</span><span class="o">.</span><span class="n">subclass</span> <span class="o">==</span> <span class="n">cell_type</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
@@ -1168,8 +1142,7 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - NWCS (SSAM)&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">analysis</span><span class="o">.</span><span class="n">map_celltypes</span><span class="p">(</span><span class="n">centroids_gmcs</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analysis</span><span class="o">.</span><span class="n">map_celltypes</span><span class="p">(</span><span class="n">centroids_gmcs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1212,8 +1185,7 @@ Processing chunk (0/1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">analysis</span><span class="o">.</span><span class="n">filter_celltypemaps</span><span class="p">(</span><span class="n">min_norm</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">min_r</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analysis</span><span class="o">.</span><span class="n">filter_celltypemaps</span><span class="p">(</span><span class="n">min_norm</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">min_r</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1221,8 +1193,7 @@ Processing chunk (0/1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">map_colors_gmcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">cell_class_colors</span><span class="p">[</span><span class="n">ct</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;L23&quot;</span><span class="p">,</span> <span class="s2">&quot;L2/3&quot;</span><span class="p">)]</span> <span class="k">for</span> <span class="n">ct</span> <span class="ow">in</span> <span class="n">uniq_celltypes_gmcs</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_colors_gmcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">cell_class_colors</span><span class="p">[</span><span class="n">ct</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;L23&quot;</span><span class="p">,</span> <span class="s2">&quot;L2/3&quot;</span><span class="p">)]</span> <span class="k">for</span> <span class="n">ct</span> <span class="ow">in</span> <span class="n">uniq_celltypes_gmcs</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1230,8 +1201,7 @@ Processing chunk (0/1)...
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[269]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
 <span class="n">ds</span><span class="o">.</span><span class="n">plot_celltypes_map</span><span class="p">(</span><span class="n">rotate</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">map_colors_gmcs</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Multiplexed smFISH - GMCS (SSAM)&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1257,8 +1227,7 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - GMCS (SSAM)&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">closest_nwcs_clusters</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">closest_nwcs_clusters</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">closest_nwcs_clusters_r</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">closest_gmcs_clusters</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">closest_gmcs_clusters_r</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1292,8 +1261,7 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - GMCS (SSAM)&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[190]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">seg_df</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seg_df</span>
 </pre></div>
 </div>
 </div>
@@ -1485,8 +1453,7 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - GMCS (SSAM)&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[267]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">ConvexHull</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">ConvexHull</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
@@ -1525,8 +1492,7 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - NWCS&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[268]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">ConvexHull</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">ConvexHull</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
@@ -1577,11 +1543,13 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - GMCS&#39;)
     <div class="container">
       <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../analysis_topics.html">Topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/0.cell-type-clustering.html">Cell Type Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis_topics/1.marker-gene-selection.html">Marker Gene Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis_topics/2.experimental-methods.html">Experimental Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/3.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/4.data-visualization.html">Data Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/3.segmentation.html">Cell Segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/4.data-formatting-pipelines.html">Data Formatting Standards and Computational Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/5.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/6.data-visualization.html">Data Visualization</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Examples and Code</a><ul class="current">
@@ -1590,9 +1558,10 @@ Text(0.5, 1.0, &#39;Multiplexed smFISH - GMCS&#39;)
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Multiplexed smFISH data SSAM analysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Data and Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../discussion.html">Discussion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../discussion/discussion.html">Discussion 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../discussion/discussion.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../discussion/related-projects.html">Related Projects and Ongoing Work</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing Guidelines</a></li>

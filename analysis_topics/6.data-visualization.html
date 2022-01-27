@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Examples and Code" href="../examples.html" />
-    <link rel="prev" title="Cell Type Mapping and Combined Results" href="3.cell-type-mapping-and-consensus.html" /> 
+    <link rel="prev" title="Cell Type Mapping and Combined Results" href="5.cell-type-mapping-and-consensus.html" /> 
   </head><body>
   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -57,14 +57,55 @@
             
   <section id="data-visualization">
 <h1>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Cytosplore &lt;downlaod link&gt;
-- screen shots
-- walk-through video?</p></li>
-<li><p>SSAM
-- example images</p></li>
+<p>Spatial Transcriptomics data presents unique challenges for visualization.</p>
+<ul>
+<li><dl class="simple">
+<dt>Visualization of processed spatial transcriptomics data</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>Processed Spatial Transcriptomics data typically includes:</dt><dd><ul>
+<li><p>Spot Tables: Spatial locations for all mRNA spots detected in the experiment.</p></li>
+<li><p>Cell by Gene Tables: Cell locations and the total mRNA counts associated with each cell.</p></li>
+<li><p>Overview Image: spatial context for high-resolution data. For example, SpaceTx Consortium data includes high resolution data of mouse VISp and the overview image includes a DAPI image of the entire coronal section containing the VISp data.</p></li>
 </ul>
-<p>The github repo: <a class="reference external" href="https://github.com/spacetx-spacejam">https://github.com/spacetx-spacejam</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><dl class="simple">
+<dt>Cell by Gene Visualization in Cytosplore</dt><dd><ul class="simple">
+<li><p>Boudewijn Lelieveldt and the Cytosplore Team have created a project-specific Cytosplore viewer for interactive exploration of SpaceTx cell by gene data</p></li>
+<li><p>download link:</p></li>
+<li><p>walk-through or screenshot</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Segmentation-free data analysis and visualization</dt><dd><ul class="simple">
+<li><p>The heterogeneity of gene expression in tissue can be explored without cell segmentation.</p></li>
+<li><p>The SSAM method (<a class="reference external" href="https://www.nature.com/articles/s41467-021-23807-4">Nature Communications volume 12, Article number: 3545 (2021)</a>) applied to SpaceTx data creates an easily visualized landscape of gene expression that can highlight rare cell types or tissue organization.</p></li>
+</ul>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/to_be_modified_SSAM.png"><img alt="../_images/to_be_modified_SSAM.png" src="../_images/to_be_modified_SSAM.png" style="width: 800px;" /></a>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><dl class="simple">
+<dt>Image Data Visualization</dt><dd><ul class="simple">
+<li><p>Unlike traditional biological imaging, spatial transcriptomics image data is often uninterpretible on its own. For example, each (round,channel) image from a MERFISH experiment typically contains diffraction-limited spots from all copies of 10s of different mRNA species. However, an image of DAPI from the same experiment could be very useful for visualizing tissue context for processed spatial transcriptomics data.</p></li>
+<li><p>Raw image data for spatial transcriptomics is frequently at the terabyte scale and visualization requires comprehension of the spatial and (round,channel) organization of the images.</p></li>
+<li><p>Modern bioimage visualization tools such as <a class="reference external" href="https://github.com/google/neuroglancer">Neuroglancer</a> and <a class="reference external" href="https://napari.org/">Napari</a> can be used to visualize spatial transcriptomics image data, but only to the extent that image data format information is interpretable by the visualization tool. Visualization tools will become more interoperable when and if the bioimaging community converges on formats and metadata standards for multiround fluorescence experiments. Large community standards projects like  <a class="reference external" href="https://forum.image.sc/tag/ome-ngff">OME-NGFF</a> as well as smaller, nascent projects like <a class="reference external" href="https://github.com/tlambert03/useq-schema">useq-schema</a> could form the basis of a metadata standard that could be applied to spatial transcriptomics microscopy data to simplify interactive visualization of large scale image data.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </section>
 
 
@@ -80,10 +121,12 @@
     <div class="container">
       <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../analysis_topics.html">Topics</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="0.cell-type-clustering.html">Cell Type Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.marker-gene-selection.html">Marker Gene Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.experimental-methods.html">Experimental Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.segmentation.html">Cell Segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.data-formatting-pipelines.html">Data Formatting Standards and Computational Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Data Visualization</a></li>
 </ul>
 </li>
@@ -93,9 +136,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../examples/2.consensus_msmfish.html">Multiplexed smFISH data SSAM analysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results.html">Data and Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../discussion.html">Discussion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../discussion/discussion.html">Discussion 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../discussion/discussion.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../discussion/related-projects.html">Related Projects and Ongoing Work</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing Guidelines</a></li>
