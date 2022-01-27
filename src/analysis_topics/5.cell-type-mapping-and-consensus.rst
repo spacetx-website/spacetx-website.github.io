@@ -1,0 +1,42 @@
+Cell Type Mapping and Combined Results
+=======================================
+
+- Cell Type Mapping
+This is the first time spatial transcriptomics data has been analyzed and compared across methods for cell type determination. We developed approaches to combine multiple cell type mapping methods and applied them to data sets from five experimental methods.
+
+A primary output of segmentation in each of the image-based experimental methods is a table of putative cells which each have a count of the number of molecules per gene as well as a soma location.  In this section we present results for MERFISH, but can do the same for other methods.  Cells located outside of the primary visual cortex (VISp) based on expert annotation or that do not pass quality control filters are excluded from further analysis. 
+
+ We next aimed to assign a cell type and associated confidence to each putative cell based on gene molecule counts.  This was done using a combined analysis approach, where the strategies below were used to map cells to cell types from the taxonomy defined above, and the results of these strategies were then combined to produce a single combined cell type call with associated confidence score for each remaining cell.
+
+- Annotation of VISp area for mapping
+  Cell locations were visualized in Napari https://napari.org and manually 
+  annotated to contain the largest possible area of primary visual cortex. 
+  Layers were manually annotated based on cell density and gene expression.
+
+
+- Cell Mapping strategies (including cell QC/filtering steps)
+
+  - QC criteria
+  
+  - Baysor (Viktor Petukhov)  `Github repo <https://github.com/kharchenkolab/Baysor>`_, `Nature Biotechnology (2021) <https://www.nature.com/articles/s41587-021-01044-w>`_ or `BioRxiv preprint <https://www.biorxiv.org/content/10.1101/2020.10.05.326777v1>`_
+
+  - mFISHtools (Jeremy Miller) https://github.com/AllenInstitute/mfishtools/
+
+  - Eeshit's method [Eeshit]
+
+  - Renee's method: Mapping spatially-defined cells to canonical cell types from scRNA-seq using FR-Match 
+
+  - pciSeq https://github.com/acycliq/pciSeq
+
+  - Yilin's method [Yilin]
+
+- Combination of mapping results
+  - negative weighting
+  - geometric median
+
+
+- Visium Data Single Cell Mapping
+  
+  - Stereoscope
+  
+  - Tangram

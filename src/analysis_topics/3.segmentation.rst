@@ -1,0 +1,34 @@
+Cell Segmentation
+=======================================
+
+Cell segmentation associates mRNA spot locations with individual cells, creating transcriptomic profiles that make up the cell-by-gene table.
+
+**Cell Segmentation Methods I:**
+
+Basic cell segmentation uses image data such as DAPI or PolyA images to define a spatial region for each cell. 
+
+In the SpaceTx project, we developed DAPI-based nuclear segmentation method that was subsequently used for augmented cell segmentation methods described below. 
+
+- Oleh's approach: feature based
+- Luca's approach: learning based 
+
+
+**Cell Segmentation Methods II:**
+
+Augmented Cell Segmentation methods use additional information (beyond image data) to associate mRNA spot locations with individual cells [Viktor, Dimitris, others?] 
+
+
+
+SpaceTx segmentation approach:
+
+1. Segmentation of DAPI images to define nuclei
+2. Incorporate DAPI segmentation, mRNA spot tables and cluster annotations in Baysor alogrithm to create cell-by-gene tables. 
+3. Create alternative segmentation using pciSeq to revise mRNA spot assignments
+
+- Summary of how Baysor works (Viktor) 
+    - Discuss the role of DAPI segmentation in these data sets- when does it help, when does it hurt?
+    - reference
+  
+- Summary of how pciSeq works (Dimitris)
+ 
+

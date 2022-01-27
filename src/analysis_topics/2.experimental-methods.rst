@@ -2,3 +2,10 @@ Experimental Methods
 ====================
 .. image:: crop_methods.png
   :width: 800
+SpaceTx Consortium data includes the following experimental methods:
+
+- **multiround smFISH**: `SSAM paper <https://www.nature.com/articles/s41467-021-23807-4>`_
+- **In-situ sequencing**: `hybISS paper <https://academic.oup.com/nar/article/48/19/e112/5912821#282922333>`_
+- **ExSeq**: `ExSeq paper <https://www.science.org/doi/10.1126/science.aax2656>`_
+- **MERFISH**: This unpublished MERFISH data is from a prototype pipeline with max projected z-stacks prior to decoding.
+- **BaristaSeq**: `BaristaSeq paper <https://academic.oup.com/nar/article/46/4/e22/4668654>`_
