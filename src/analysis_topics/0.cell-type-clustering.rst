@@ -1,5 +1,5 @@
 Cell Type Identification in single cell RNASeq data
-====================
+===================================================
 The SpaceTx consortium chose the mouse visual cortex as the substrate for spatial transcriptomics comparisons. This was Consensus clustering
 
 Computational strategies:

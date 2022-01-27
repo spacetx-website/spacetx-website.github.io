@@ -5,4 +5,5 @@ Discussion
    :maxdepth: 1   
    :glob:
    
-   discussion/*
+   discussion/discussion.rst
+   discussion/related-projects.rst
