@@ -1,7 +1,8 @@
 Experimental Methods
 ====================
-.. image:: crop_methods.png
+.. image:: mock_data_table.png
   :width: 800
+  
 SpaceTx Consortium data includes the following experimental methods:
 
 - **multiround smFISH**: `SSAM paper <https://www.nature.com/articles/s41467-021-23807-4>`_
