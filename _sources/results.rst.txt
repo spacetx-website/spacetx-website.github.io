@@ -1,9 +1,9 @@
 Data and Results
 ================
 
-table with links to data coming soon...
+Data download available at the "Data" tab above.
 
-placeholder:
+Notes on Experimental Methods:
 
 .. image:: mock_data_table.png
     :width: 800

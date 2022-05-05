@@ -70,11 +70,15 @@ h6.hover .headerlink {
     background-image: url('hackathon3.jpg');
 }
 
+#data-top {
+    background-image: url('animated_spots_2.gif');
+    height: 800px !important;
+}
+
 #people-top {
     background-image: url('everyone.jpg');
     height: 800px !important;
 }
-
 .spacer {
     height: 81px;
     background-color: #777;

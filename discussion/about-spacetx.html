@@ -22,8 +22,8 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cell Segmentation" href="3.segmentation.html" />
-    <link rel="prev" title="Marker Gene Selection" href="1.marker-gene-selection.html" /> 
+    <link rel="next" title="Introduction" href="discussion.html" />
+    <link rel="prev" title="Discussion" href="../discussion.html" /> 
   </head><body>
   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -56,21 +56,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="experimental-methods">
-<h1>Experimental Methods<a class="headerlink" href="#experimental-methods" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/mock_data_table.png"><img alt="../_images/mock_data_table.png" src="../_images/mock_data_table.png" style="width: 800px;" /></a>
-<p>SpaceTx Consortium data includes the following experimental methods:</p>
-<ul class="simple">
-<li><p><strong>multiround smFISH</strong>: <a class="reference external" href="https://www.nature.com/articles/s41467-021-23807-4">SSAM paper</a></p></li>
-<li><p><strong>In-situ sequencing</strong>: <a class="reference external" href="https://academic.oup.com/nar/article/48/19/e112/5912821#282922333">hybISS paper</a></p></li>
-<li><p><strong>ExSeq</strong>: <a class="reference external" href="https://www.science.org/doi/10.1126/science.aax2656">ExSeq paper</a></p></li>
-<li><p><strong>MERFISH</strong>: This unpublished MERFISH data is from a prototype pipeline with max projected z-stacks prior to decoding.</p></li>
-<li><p><strong>BaristaSeq</strong>: <a class="reference external" href="https://academic.oup.com/nar/article/46/4/e22/4668654">BaristaSeq paper</a></p></li>
-</ul>
-<p>In addition to these image based spatial transcriptomics methods, we also analyzed data from a sequencing-based method:</p>
-<ul class="simple">
-<li><p><strong>Visium</strong>: Visium is a (commercial) sequencing-based technique, where spatially barcoded oligonucleotides with a poly-T sequence are used to capture mRNA from fresh frozen tissue samples. In the Visium platform, capture locations (hereafter; spots), containing the barcoded oligonucleotides, are arranged according by “orange-crate packing” forming an equidistant hexagonal grid.  Spots have a center to center distance of 100μm and a diameter of 55μm. A square region with sides of 6.5mm, containing 4992 spots, constitute the capture area  onto which tissue samples are attached. Brightfield images are taken of the tissue samples after staining with hematoxylin and eosin (HE-images). Count data, obtained after sequencing, can be computationally aligned to the  HE-images and related to morphological features.</p></li>
-</ul>
+  <section id="about-spacetx">
+<h1>About SpaceTx<a class="headerlink" href="#about-spacetx" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://chanzuckerberg.com/human-cell-atlas/spacetx-benchmarking-methods-for-spatial-transcriptomic-mapping-of-cortical-cell-types/">The SpaceTx Consortium</a> was created as part of the Chan Zuckerberg Initiative’s support for the Human Cell Atlas with the goal of benchmarking spatial transcriptomics methods by comparing standardized outputs in the mouse visual cortex and human middle temporal gyrus. Generating this data was challenging, as the experimental methods were in early days of development in academic labs. Data from multiple modalities was finally aggregated for a hackathon in February of 2020, just as the SARS-COv-2 virus was beginning to circulate across the globe.</p>
 </section>
 
 
@@ -85,14 +73,14 @@
   <div id="footer">
     <div class="container">
       <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../analysis_topics.html">Topics</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.marker-gene-selection.html">Marker Gene Selection</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Experimental Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.segmentation.html">Cell Segmentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.data-formatting-pipelines.html">Data Formatting Standards and Computational Pipelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.data-visualization.html">Data Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis_topics.html">Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/1.marker-gene-selection.html">Marker Gene Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/2.experimental-methods.html">Experimental Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/3.segmentation.html">Cell Segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/4.data-formatting-pipelines.html">Data Formatting Standards and Computational Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/5.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis_topics/6.data-visualization.html">Data Visualization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples and Code</a><ul>
@@ -102,11 +90,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../results.html">Data and Results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../discussion.html">Discussion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../discussion/about-spacetx.html">About SpaceTx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../discussion/discussion.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../discussion/related-projects.html">Related Projects and Ongoing Work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../discussion/commercial-systems.html">Commercial Systems for Spatial Transcriptomics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../discussion.html">Discussion</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">About SpaceTx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="discussion.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="related-projects.html">Related Projects and Ongoing Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commercial-systems.html">Commercial Systems for Spatial Transcriptomics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing Guidelines</a></li>

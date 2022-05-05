@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SpaceTx: experimental and computational methods compartison for spatially resolved transcriptomics</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +20,7 @@
     <script src="_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Cell Type Mapping Methods" href="examples/0.cell-type-mapping-methods.html" />
-    <link rel="prev" title="Data Visualization" href="analysis_topics/6.data-visualization.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head><body>
   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -34,9 +31,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li><a class="nav-link" href="people.html">People</a></li>
-          <li><a class="nav-link" href="data.html">Data</a></li>
+          <li><a class="nav-link" href="#">Data</a></li>
           <li><a class="nav-link" href="spacejam.html">SpaceJam Hackathon</a></li>
-          <li><a class="nav-link" href="#">Examples and Code</a></li>
+          <li><a class="nav-link" href="examples.html">Examples and Code</a></li>
           <li><a class="nav-link" href="contribute.html">Contributing Guidelines</a></li>
         </ul>
         <form class="d-flex" action="search.html" method="get">
@@ -46,39 +43,31 @@
       </div>
     </div>
   </nav>
-    <div class="spacer"></div>
+<div class="cover-top" id="data-top">
+</div>
 
     <div id="wrapper">
       <div id="main" class="container">
         <div id="content">
-          
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="examples-and-code">
-<h1>Examples and Code<a class="headerlink" href="#examples-and-code" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/0.cell-type-mapping-methods.html">Cell Type Mapping Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/1.combinded-mapping-results.html">Combined Mapping Results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/2.consensus_msmfish.html">SSAM Notebook: Multiplexed smFISH SSAM analysis</a></li>
-</ul>
-</div>
-</section>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
+<table style="margin: 0 auto;">
+    <tbody><tr>
+      <th>Method</th>
+        <th>Info</th>
+          <th>Data Links</th>
+    </tr>
+    <tr><td> BARISTASeq </td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/BARISTASeq_Readme.txt> BARISTASeq_Readme.txt</a></td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/s3_cell_by_gene.csv>cell_by_gene.csv </a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/s3_mapped_cell_table.csv> mapped_cell_table.csv</a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/s3_spot_table.csv> spot_table.csv</a></td></tr>
+    <tr><td> multiround smFISH</td><td><a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/smFISH_Allen/smFISH_Readme.txt>smFISH_Readme.txt</a> </td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/smFISH_Allen/s3_cell_by_gene.csv>cell_by_gene.csv </a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/smFISH_Allen/s3_mapped_cell_table.csv> mapped_cell_table.csv</a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/smFISH_Allen/s3_spot_table.csv> spot_table.csv</a></td></tr>
+    <tr><td> ExSeq</td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ExSeq/ExSeq_Readme.txt>ExSeq_Readme.txt</a></td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ExSeq/s3_cell_by_gene.csv>cell_by_gene.csv </a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ExSeq/s3_mapped_cell_table.csv> mapped_cell_table.csv</a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ExSeq/s3_spot_table.csv> spot_table.csv</a></td></tr>
+    <tr><td> MERFISH (Allen Institute prototype)</td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/MERFISH_Allen_Prototype/MERFISH_Allen_Prototype_Readme.txt> MERFISH_Allen_Prototype_Readme.txt      </a></td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/MERFISH_Allen_prototype/s3_cell_by_gene.csv>cell_by_gene.csv </a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/MERFISH_Allen_prototype/s3_mapped_cell_table.csv> mapped_cell_table.csv</a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/MERFISH_Allen_prototype/s3_spot_table.csv> spot_table.csv</a></td></tr>
+    <tr><td> ISS</td><td><a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ISS/ISS_Readme.txt>ISS_Readme.txt</a> </td><td> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ISS/s3_cell_by_gene.csv>cell_by_gene.csv </a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ISS/s3_mapped_cell_table.csv> mapped_cell_table.csv</a> <a href=https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/ISS/s3_spot_table.csv> spot_table.csv</a></td></tr>
+  </tbody></table>
         </div>
       </div>
     </div>
 
   <div id="footer">
     <div class="container">
-      <ul class="current">
+      <ul>
 <li class="toctree-l1"><a class="reference internal" href="analysis_topics.html">Topics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="analysis_topics/0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis_topics/1.marker-gene-selection.html">Marker Gene Selection</a></li>
@@ -89,7 +78,7 @@
 <li class="toctree-l2"><a class="reference internal" href="analysis_topics/6.data-visualization.html">Data Visualization</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples and Code</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples and Code</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples/0.cell-type-mapping-methods.html">Cell Type Mapping Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/1.combinded-mapping-results.html">Combined Mapping Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/2.consensus_msmfish.html">SSAM Notebook: Multiplexed smFISH SSAM analysis</a></li>
