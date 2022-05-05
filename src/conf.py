@@ -107,4 +107,4 @@ html_css_files = [
 #
 # html_sidebars = {}
 
-html_additional_pages = {'index': 'index.html', 'people': 'people.html', 'spacejam': 'spacejam.html'}
+html_additional_pages = {'index': 'index.html','data': 'data.html', 'people': 'people.html', 'spacejam': 'spacejam.html'}
