@@ -9,7 +9,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -22,24 +22,28 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
   </head><body>
-  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><img id="main-logo" src="/_static/spacetx_logo_web.svg"></a>
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light">
+    <div class="container pt-2 pb-4">
+      <a class="navbar-brand" href="index.html"><img id="main-logo" src="/_static/spacetx_logo_web_black.svg"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li><a class="nav-link" href="#">People</a></li>
-          <li><a class="nav-link" href="data.html">Data</a></li>
-          <li><a class="nav-link" href="spacejam.html">SpaceJam Hackathon</a></li>
-          <li><a class="nav-link" href="examples.html">Examples and Code</a></li>
-          <li><a class="nav-link" href="contribute.html">Contributing Guidelines</a></li>
-        </ul>
-        <form class="d-flex" action="search.html" method="get">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
-          <button class="btn btn-success" type="submit">Search</button>
-        </form>
+    </div>
+    <div id="main-menubar" class="container-fluid">
+      <div class="container position-relative">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between">
+            <li><a class="nav-link" href="#">People</a></li>
+            <li><a class="nav-link" href="spacejam.html">SpaceJam Hackathon</a></li>
+            <li><a class="nav-link" href="data_analysis.html">Data and Analysis</a></li>
+            <li><a class="nav-link" href="results.html">Results and Code</a></li>
+            <li><a class="nav-link" href="contribute.html">Contributing Guidelines</a></li>
+          </ul>
+          <form class="d-flex mb-4" id="main-search" action="search.html" method="get">
+            <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+            <button class="btn btn-success btn-sm" type="submit">Search</button>
+          </form>
+        </div>
       </div>
     </div>
   </nav>
@@ -49,6 +53,50 @@
     <div id="wrapper">
       <div id="main" class="container">
         <div id="content">
+<div class="text-center mb-5">
+  <h2>Paper Writing Group</h2>
+  <table style="margin: 0 auto;">
+    <tbody><tr>
+      <th>Name</th>
+          <th>Organization</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center mb-5">
+  <h2>Data Generation Group</h2>
+  <table style="margin: 0 auto;">
+    <tbody><tr>
+      <th>Name</th>
+          <th>Organization</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center mb-5">
+  <h2>Data Analysis Group</h2>
+  <table style="margin: 0 auto;">
+    <tbody><tr>
+      <th>Name</th>
+          <th>Organization</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center mb-5">
+  <h2>SpaceJam Hackathon attendees</h2>
+  <table style="margin: 0 auto;">
+    <tbody><tr>
+      <th>Name</th>
+          <th>Organization</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center">
+  <h2>SpaceJam "2" Hackathon attendees</h2>
+</div>
+<br>
 <table style="margin: 0 auto;">
     <tbody><tr>
       <th>Name</th>
@@ -96,23 +144,23 @@
   <div id="footer">
     <div class="container">
       <ul>
-<li class="toctree-l1"><a class="reference internal" href="analysis_topics.html">Topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="analysis_topics/0.cell-type-clustering.html">Cell Type Identification in single cell RNASeq data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis_topics/1.marker-gene-selection.html">Marker Gene Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis_topics/2.experimental-methods.html">Experimental Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis_topics/3.segmentation.html">Cell Segmentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis_topics/4.data-formatting-pipelines.html">Data Formatting Standards and Computational Pipelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis_topics/5.cell-type-mapping-and-consensus.html">Cell Type Mapping and Combined Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis_topics/6.data-visualization.html">Data Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis.html">Data and Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#data">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#cell-type-identification-in-single-cell-rnaseq-data">Cell Type Identification in single cell RNASeq data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#marker-gene-selection">Marker Gene Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#experimental-methods">Experimental Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#cell-segmentation">Cell Segmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#data-formatting-standards-and-computational-pipelines">Data Formatting Standards and Computational Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#cell-type-mapping-and-combined-results">Cell Type Mapping and Combined Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_analysis.html#data-visualization">Data Visualization</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples and Code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples/0.cell-type-mapping-methods.html">Cell Type Mapping Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/1.combinded-mapping-results.html">Combined Mapping Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/2.consensus_msmfish.html">SSAM Notebook: Multiplexed smFISH SSAM analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Results and Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="results.html#cell-type-mapping-methods">Cell Type Mapping Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#publications">Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#jupyter-notebooks">Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="results.html">Data and Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="discussion.html">Discussion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="discussion/about-spacetx.html">About SpaceTx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discussion/discussion.html">Introduction</a></li>

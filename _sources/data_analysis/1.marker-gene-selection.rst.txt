@@ -1,0 +1,14 @@
+Marker Gene Selection
+---------------------
+
+Four different computational strategies:
+
+- (Jeremy M) - Greedy algorithm generally identifies combinatorial genes.  This method was used for completing smaller panels and validating all panels.
+
+- (Kenneth H) Probability model aimed to maximize the average number of levels of a clustering tree correctly classified
+
+- (Brian A) - NS-Forest: Random forest strategy aimed at identifying the most informative markers of specific cell types 
+
+- (Eeshit DV) Random forest strategy which ranks genes based on the overall importance towards classification
+
+(Eeshit DV) These methods were merged together into a ranked list and some gene panels were selected from this list.

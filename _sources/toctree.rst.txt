@@ -1,8 +1,7 @@
 .. toctree::
    :maxdepth: 2
 
-   analysis_topics
-   examples
+   data_analysis
    results
    discussion
    contribute
