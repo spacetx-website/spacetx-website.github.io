@@ -1,4 +1,0 @@
-About SpaceTx
-=============
-
-`The SpaceTx Consortium <https://chanzuckerberg.com/human-cell-atlas/spacetx-benchmarking-methods-for-spatial-transcriptomic-mapping-of-cortical-cell-types/>`_ was created as part of the Chan Zuckerberg Initiative's support for the Human Cell Atlas with the goal of benchmarking spatial transcriptomics methods by comparing standardized outputs in the mouse visual cortex and human middle temporal gyrus. Generating this data was challenging, as the experimental methods were in early days of development in academic labs. Data from multiple modalities was finally aggregated for a hackathon in February of 2020, just as the SARS-COv-2 virus was beginning to circulate across the globe.
