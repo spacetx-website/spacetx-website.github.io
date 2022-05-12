@@ -67,9 +67,17 @@ h6.hover .headerlink {
     }  
 }
 
-.nav-link {
+.nav-link, .dropdown-item {
     font-size: 11pt;
     font-weight: bold;
+}
+
+.dropdown-item {
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.dropdown-item:hover {
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .cover-top {
