@@ -1,5 +1,6 @@
 Experimental Methods
-====================
+--------------------
+
 .. image:: mock_data_table.png
   :width: 800
   

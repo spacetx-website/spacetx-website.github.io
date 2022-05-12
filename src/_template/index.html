@@ -9,22 +9,38 @@
 {%- endblock %}
 
 {%- block document %}
-<p>Mapping spatial distributions of molecularly defined cell types is essential in the brain, with its exceptional
-cellular heterogeneity and the functional significance of spatial organization. To address this issue, several
-multiplex FISH or in situ RNA sequencing methods have been developed in parallel, each using different experimental
-and computational protocols, with different trade-offs and optimizations.</p>
-<p>We present the results of the SpaceTx Consortium, including a direct comparison of six different matched experiments
-performed in mouse primary visual cortex. Following cell type analysis of single cell transcriptomics data in the same
-brain region, we tailored a range of gene panels specifically to solve the problem of mapping imaged cells to known
-transcriptomic types.</p>
-<p>We summarize the performance of each method in the context of this experiment, compare their outputs and
-present results for the spatial distribution of gene expression and cell types. We present a meta-analysis of
-methodological similarities and differences between experimental protocols and the resulting cell type assignments
-and measurements of their abundance and spatial distribution.</p>
-<p>By comparing various methods to determine the
-transcriptomic type of individual cells (“cell type mapping”), we show that cell type mapping methods are a
-critical point for further research as spatial transcriptomic methods become more widely available. We also present
-the consortium’s successful efforts to address critical issues such as the standardization of computational analysis
-and file formats, cell segmentation, cell type assignment, and big data visualization. All data and analyses from
-this consortium are publicly available.</p>
+<h1>SpaceTx Consortium</h1>
+<p>
+    The SpaceTx Consortium was created as part of the <a href="https://chanzuckerberg.com/human-cell-atlas/spacetx-benchmarking-methods-for-spatial-transcriptomic-mapping-of-cortical-cell-types/" target="blank">
+    Chan Zuckerberg Initiative's support for the Human Cell Atlas</a> with the goal of benchmarking spatial transcriptomics methods by comparing standardized outputs in the mouse visual
+    cortex and human middle temporal gyrus. Generating this data was challenging, as the experimental methods were in early days of development in academic labs. Data from multiple modalities
+    was finally aggregated for a hackathon in February of 2020, just as the SARS-COv-2 virus was beginning to circulate across the globe.
+    
+</p>
+<div class="d-flex flex-wrap justify-content-center align-items-center mb-5">
+    <a class="me-5" href="https://chanzuckerberg.com/" target="blank">
+        <img src="/_static/czi-logo.png" class="my-3" alt="Chan Zuckerberg Initiative" style="height: 110px;">
+    </a>
+    <a href="https://alleninstitute.org/" target="blank">
+        <img src="/_static/aibs-logo.png" class="my-3" alt="Allen Institute" style="height: 70px;">
+    </a>
+</div>
+
+<h2>SpaceJam Hackathon</h2>
+<p>
+    There have been two SpaceJam Hackathons, one in 2019 and one in 2020. The 2019 SpaceJam Hackathon was held at the Allen Insitute in Seattle, Washington.
+    The 2020 SpaceJam Hackathon was held at the Chan Zuckerberg Initiative in Redwood City, California.
+</p>
+<div class="text-center mt-4 mb-5">
+    <a class="btn btn-primary" href="/spacejam.html">Learn More about SpaceJam Hackathon</a>
+</div>
+
+<h2>Results and Code</h2>
+<p>
+    Our results include a direct comparison of six different matched experiments performed in mouse primary visual cortex, and our efforts to address
+    critical issues such as the standardization of computational analysis and file formats, cell segmentation, cell type assignment, and big data visualization.
+</p>
+<div class="text-center mt-4 mb-5">
+    <a class="btn btn-primary" href="/results.html">Access Results and Code</a>
+</div>
 {%- endblock %}

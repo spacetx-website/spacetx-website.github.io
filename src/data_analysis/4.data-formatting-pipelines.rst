@@ -1,5 +1,6 @@
 Data Formatting Standards and Computational Pipelines
-=====================================================
+-----------------------------------------------------
+
 Background
 
 Many Spatial Transcriptomics methods are based on a common pattern of data acquisition: images are collected in multiple fluorescence channels after a round of readout chemistry, and this process is repeated until all fluorescent readouts have been imaged.  Similarly, the compuational processing pipelines to turn raw images into transcriptional profiles of cells share many computational steps. In this context, the SpaceTx Consortium pursued two software projects:

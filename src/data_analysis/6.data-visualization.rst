@@ -1,5 +1,5 @@
 Data Visualization
-==================
+------------------
 
 Spatial Transcriptomics data presents unique challenges for visualization. 
 
@@ -16,7 +16,8 @@ Spatial Transcriptomics data presents unique challenges for visualization.
   - Segmentation-free data analysis and visualization
       - The heterogeneity of gene expression in tissue can be explored without cell segmentation.
       - The SSAM method (`Nature Communications volume 12, Article number: 3545 (2021) <https://www.nature.com/articles/s41467-021-23807-4>`_) applied to SpaceTx data creates an easily visualized landscape of gene expression that can highlight rare cell types or tissue organization. 
-       .. image:: to_be_modified_SSAM.png
+
+       .. image:: /data_analysis/to_be_modified_SSAM.png
             :width: 800
 
 

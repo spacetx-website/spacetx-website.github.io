@@ -1,9 +1,8 @@
-.. _cell-type-mapping:
-
 Cell Type Mapping and Combined Results
-=======================================
+--------------------------------------
 
 - **Cell Type Mapping**
+
 This is the first time spatial transcriptomics data has been analyzed and compared across methods for cell type determination. We developed approaches to combine multiple cell type mapping methods and applied them to data sets from five experimental methods.
 
 A primary output of segmentation in each of the image-based experimental methods is a table of putative cells which each have a count of the number of molecules per gene as well as a soma location.  In this section we present results for MERFISH, but can do the same for other methods.  Cells located outside of the primary visual cortex (VISp) based on expert annotation or that do not pass quality control filters are excluded from further analysis. 
@@ -42,7 +41,8 @@ A primary output of segmentation in each of the image-based experimental methods
   - Visium is often described as unbiased and transcriptome-wide, since it’s not based on a priori selection of genes to be examined and targets all poly-adenlated transcripts. However, the current Visium platform does not provide single cell resolution and, though dependent on tissue, the common estimate is that approximately 1-10 cells contribute to the observed gene expression at each spot. The “mini-bulk” property of spots means that spots rarely can be assigned to a single cell type, and more common is to characterize these w.r.t. cell type compositions (e.g., proportion of cell types present at each location). For such purposes, several methods where single cell/nuclei data is used as a guide reference have been proposed, with the shared objective of decomposing the joint expression profiles observed in a spot into contributions from the cell types defined in the single cell/nuclei data.
   - **stereoscope** and **Tangram** were used to deconvolve the spatial Visium data using non-spatial single cell data, a procedure we refer to as “mapping” of the latter onto the former. In short, once presented with the Visium data, both these approaches will provide a proportion estimate of each cell type within every spot, thus allowing the spatial distribution of each cell type to be charted. Although the final products are similar, the two methods differ substantially in design; stereoscope relying on a probabilistic framework where both data modalities are modelled with a negative binomial distribution, while Tangram cast the the task more as a optimization problem where a map between single cells and spatial locations. 
   - For consistency, the cell type mapping analysis focuses on the small region that constitutes the VISp as shown in Figure 1; even though spatial gene expression data was generated from a larger part of the tissues (about half of a coronal mouse brain section fit onto the capture area). We aim to evaluate the mapping from each method, as well as comparing these two to each other. Nevertheless, establishing a ground truth for the proportion values is arguably even harder than for the cell type identities in the image-based methods, hence concurrence with well-known locations of cell types (e.g., Layer associated) will serve as the basis of our evaluation.
-  .. image:: visium.png
+
+  .. image:: /data_analysis/visium.png
       :width: 800
 
   **Figure 1** | A) zoom in on the regions of interests. Spots included in the analysis are marked on the tissue with black circles. The tissue edged to which distance is measured is indicated by a dashed red line. B) Pearson correlation values between cell type proportion estimates from stereoscope and Tangram. The star (*) on Meis2 indicates that this correlation did not have a significant p-value. C) Smoothed curves (loess smoothing) of the cell type proportions when plotted as a function of distance to the tissue edge (red in A).

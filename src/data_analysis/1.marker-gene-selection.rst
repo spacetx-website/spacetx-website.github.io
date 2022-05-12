@@ -1,5 +1,5 @@
 Marker Gene Selection
-=====================
+---------------------
 
 Four different computational strategies:
 

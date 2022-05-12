@@ -1,13 +1,28 @@
 body, html {
-    font-family: Roboto;
-    font-size: 13pt;
+    font-family: "Assistant";
+    font-size: 12pt;
     line-height: 2;
     color: #333;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
 a {
-    color: #0d75f8;
     text-decoration: none;
+}
+
+#content a {
+    font-weight: 600;
+}
+
+#content p a::before {
+    content: url('/_static/box-arrow-up-right.svg');
 }
 
 a:hover {
@@ -27,18 +42,34 @@ h6.hover .headerlink {
 }
 
 #main-navbar {
-    position: absolute;
-    backface-visibility: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) !important;
-    border-bottom: 0 !important;
+    display: block;
+    padding-bottom: 0;
+}
+
+#main-menubar {
+    box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 #main-logo {
     height: 55px;
 }
 
+@media screen and (min-width: 992px) {
+    .nav-link {
+        margin-right: 50px;
+    }
+    #main-search {
+        position: absolute;
+        right: 0;
+        top: -65px;
+    }  
+}
+
 .nav-link {
-    color: rgba(255, 255, 255, 1) !important;
+    font-size: 11pt;
+    font-weight: bold;
 }
 
 .cover-top {
@@ -52,10 +83,21 @@ h6.hover .headerlink {
     color: #fff;
     text-align: center;
     font-size: 40pt;
-    font-family: Roboto;
-    font-weight: 500;
+    font-weight: 700;
     padding-top: 200px;
     line-height: 1.5;
+}
+
+@media screen and (max-width: 1399px) {
+    .cover-text {
+        font-size: 30pt;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .cover-text {
+        font-size: 20pt;
+    }
 }
 
 #carousel-image1 {
@@ -71,7 +113,7 @@ h6.hover .headerlink {
 }
 
 #data-top {
-    background-image: url('animated_spots_2.gif');
+    background-image: url('merged_spots.webp');
     height: 800px !important;
 }
 
