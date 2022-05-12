@@ -17,3 +17,4 @@ Jupyter Notebooks
 .. toctree::
     
     results/2.consensus_msmfish.ipynb
+    results/3.celltype_calling_frmatch.rst
