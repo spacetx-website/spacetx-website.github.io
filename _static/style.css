@@ -87,6 +87,22 @@ h6.hover .headerlink {
     background-size: cover;
 }
 
+.scroll-top {
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (pointer: coarse) {
+    .scroll-top {
+        overflow-x: scroll;
+    }
+}
+.draggable {
+    cursor: grab;
+    position: absolute;
+}
+
 .cover-text {
     color: #fff;
     text-align: center;
@@ -98,13 +114,33 @@ h6.hover .headerlink {
 
 @media screen and (max-width: 1399px) {
     .cover-text {
+        padding-top: 150px;
         font-size: 30pt;
+    }
+    .cover-top {
+        height: 550px;
+    }
+    .scroll-top {
+        height: 550px;
+    }
+    .scroll-top img {
+        height: 550px;
     }
 }
 
 @media screen and (max-width: 991px) {
     .cover-text {
+        padding-top: 100px;
         font-size: 20pt;
+    }
+    .cover-top {
+        height: 400px;
+    }
+    .scroll-top {
+        height: 400px;
+    }
+    .scroll-top img {
+        height: 400px;
     }
 }
 
@@ -125,10 +161,6 @@ h6.hover .headerlink {
     height: 800px !important;
 }
 
-#people-top {
-    background-image: url('everyone.jpg');
-    height: 800px !important;
-}
 .spacer {
     height: 81px;
     background-color: #777;
