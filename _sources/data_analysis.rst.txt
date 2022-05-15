@@ -4,6 +4,18 @@ Data and Analysis
 Data
 ----
 
+.. list-table:: Data
+   :header-rows: 1
+
+   * - Method
+     - Info
+     - Data Links
+   * - BARISTASeq
+     - `BARISTASeq_Readme.txt <https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/BARISTASeq_Readme.txt>`_
+     - `cell_by_gene.csv <https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/s3_cell_by_gene.csv>`_
+       `mapped_cell_table.csv <https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/s3_mapped_cell_table.csv>`_
+       `spot_table.csv <https://s3.amazonaws.com/starfish.data.spacetx/spacetx-website/data/BARISTASeq/s3_spot_table.csv>`_
+
 .. raw:: html
 
    <table style="margin: 0 auto;">

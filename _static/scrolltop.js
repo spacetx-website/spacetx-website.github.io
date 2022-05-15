@@ -2,16 +2,18 @@ var pos = {x: 0, left: 0};
 var im = document.getElementsByClassName("draggable")[0];
 
 function moveimg(e) {
-  var dx = e.clientX - pos.x;
-  var newleft = pos.left + dx;
-  if (newleft > 0) {
-    newleft = 0;
-  } else if (newleft < -(im.width - window.innerWidth)) {
-    newleft = -(im.width - window.innerWidth);
+  if (im.width > im.parentElement.clientWidth) {
+    var dx = e.clientX - pos.x;
+    var newleft = pos.left + dx;
+    if (newleft > 0) {
+      newleft = 0;
+    } else if (newleft < -(im.width - window.innerWidth)) {
+      newleft = -(im.width - window.innerWidth);
+    }
+    pos.x = e.clientX;
+    im.style.left = newleft + 'px';
+    pos.left = newleft;
   }
-  pos.x = e.clientX;
-  im.style.left = newleft + 'px';
-  pos.left = newleft;
 }
 
 function enddragging() {
@@ -21,8 +23,8 @@ function enddragging() {
 }
 
 im.addEventListener("mousedown", function(e) {
-  pos.x = e.clientX;
   im.style.cursor = "grabbing";
+  pos.x = e.clientX;
   im.addEventListener("mousemove", moveimg);
   im.addEventListener("mouseup", enddragging);
   e.preventDefault();
