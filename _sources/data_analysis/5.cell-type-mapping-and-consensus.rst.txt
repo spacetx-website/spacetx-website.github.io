@@ -44,6 +44,7 @@ Visium Data Single Cell Mapping
   - For consistency, the cell type mapping analysis focuses on the small region that constitutes the VISp as shown in Figure 1; even though spatial gene expression data was generated from a larger part of the tissues (about half of a coronal mouse brain section fit onto the capture area). We aim to evaluate the mapping from each method, as well as comparing these two to each other. Nevertheless, establishing a ground truth for the proportion values is arguably even harder than for the cell type identities in the image-based methods, hence concurrence with well-known locations of cell types (e.g., Layer associated) will serve as the basis of our evaluation.
 
 .. image:: /data_analysis/visium.png
+    :width: 100%
 
 **Figure 1**. A) zoom in on the regions of interests. Spots included in the analysis are marked on the tissue with black circles. The tissue edged to which distance is measured is indicated by a dashed red line. B) Pearson correlation values between cell type proportion estimates from stereoscope and Tangram. The star (*) on Meis2 indicates that this correlation did not have a significant p-value. C) Smoothed curves (loess smoothing) of the cell type proportions when plotted as a function of distance to the tissue edge (red in A).
 
