@@ -68,8 +68,123 @@
             
   <section id="experimental-methods">
 <h1>Experimental Methods<a class="headerlink" href="#experimental-methods" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/mock_data_table1.png"><img alt="../_images/mock_data_table1.png" src="../_images/mock_data_table1.png" style="width: 800px;" /></a>
-<p>SpaceTx Consortium data includes the following experimental methods:</p>
+<br>
+<div class="table-responsive"><table class="table text-break docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Experimental Method</p></th>
+<th class="head"><p>Multiplexed smFISH</p></th>
+<th class="head"><p>Allen MERFISH</p></th>
+<th class="head"><p>hybridization-based in situ sequencing</p></th>
+<th class="head"><p>ExSeq</p></th>
+<th class="head"><p>Visium</p></th>
+<th class="head"><p>BaristaSeq</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Readout mechanism</strong></p></td>
+<td><p>non-barcoded</p></td>
+<td><p>barcoded</p></td>
+<td><p>sequencing-based</p></td>
+<td><p>sequencing-based</p></td>
+<td><p>spatial barcoding, sequencing en mass</p></td>
+<td><p>sequencing-based</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Enzymatic Amplification</strong></p></td>
+<td><p>no</p></td>
+<td><p>no</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+<td><p>no readout imaging</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Publications</strong></p></td>
+<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30392798">https://www.ncbi.nlm.nih.gov/pubmed/30392798</a></p></td>
+<td></td>
+<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.02.03.931618v1">https://www.biorxiv.org/content/10.1101/2020.02.03.931618v1</a></p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1126/science.aax2656">https://doi.org/10.1126/science.aax2656</a></p></td>
+<td><p><a class="reference external" href="https://science.sciencemag.org/content/353/6294/78">https://science.sciencemag.org/content/353/6294/78</a>
+<a class="reference external" href="https://www.10xgenomics.com/products/spatial-gene-expression/">https://www.10xgenomics.com/products/spatial-gene-expression/</a></p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1093/nar/gkx1206">https://doi.org/10.1093/nar/gkx1206</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Number of genes</strong></p></td>
+<td><p>22</p></td>
+<td><p>254</p></td>
+<td><p>human: 120,
+mouse: 119</p></td>
+<td><p>mouse: 42</p></td>
+<td><p>Full transcriptome</p></td>
+<td><p>76</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Area Imaged</strong></p></td>
+<td><p>~3mm<sup>2</sup></p></td>
+<td><p>~1.9mm<sup>2</sup></p></td>
+<td><p>human: 26.6mm<sup>2</sup>,
+mouse: 53.6mm<sup>2</sup></p></td>
+<td><p>mouse: ~1mm<sup>2</sup></p></td>
+<td><p>6.5mm<sup>2</sup></p></td>
+<td><p>0.75 x 1.2 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tissue Thickness</strong></p></td>
+<td><p>10 μm</p></td>
+<td><p>10 μm</p></td>
+<td><p>10 μm</p></td>
+<td><p>20 μm</p></td>
+<td><p>10 μm</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>Detection Sensitivity (high: same order of magnitude as smFISH, medium: ~1 OoM lowerthan smFISH, low: more than 1 OoM counts per cell below smFISH)</strong></p></td>
+<td><p>high</p></td>
+<td><p>medium</p></td>
+<td><p>low</p></td>
+<td><p>medium</p></td>
+<td><p>n/a</p></td>
+<td><p>low</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Average Total Counts Per Cell</strong></p></td>
+<td><p>225</p></td>
+<td><p>919</p></td>
+<td><p>human: 38.6,
+mouse: 30</p></td>
+<td><p>mouse: 177 (for cells passing QC)</p></td>
+<td><p>n/a</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Cellular Spatial Resolution?</strong></p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+<td><p>subcellular</p></td>
+<td><p>no</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Reagent Cost Per Experiment (USD)</strong></p></td>
+<td></td>
+<td><p>500</p></td>
+<td></td>
+<td><p>500</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>Time Per Experiment</strong></p></td>
+<td><p>1 week</p></td>
+<td><p>24 hours imaging, 4 days sample prep after sectioning</p></td>
+<td><p>&lt; 1 week</p></td>
+<td><p>4 days (imaging); 1 week of sample prep prior</p></td>
+<td><p>~1 day</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><p>SpaceTx Consortium data includes the following experimental methods:</p>
 <ul class="simple">
 <li><p><strong>multiround smFISH</strong>: <a class="reference external" href="https://www.nature.com/articles/s41467-021-23807-4">SSAM paper</a></p></li>
 <li><p><strong>In-situ sequencing</strong>: <a class="reference external" href="https://academic.oup.com/nar/article/48/19/e112/5912821#282922333">hybISS paper</a></p></li>
@@ -108,7 +223,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#experimental-methods">Experimental Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#cell-segmentation">Cell Segmentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#data-formatting-standards-and-computational-pipelines">Data Formatting Standards and Computational Pipelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#cell-type-mapping-and-combined-results">Cell Type Mapping and Combined Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#data-visualization">Data Visualization</a></li>
 </ul>
 </li>

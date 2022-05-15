@@ -68,13 +68,15 @@
             
   <section id="data-formatting-standards-and-computational-pipelines">
 <h1>Data Formatting Standards and Computational Pipelines<a class="headerlink" href="#data-formatting-standards-and-computational-pipelines" title="Permalink to this headline">¶</a></h1>
-<p>Background</p>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>Many Spatial Transcriptomics methods are based on a common pattern of data acquisition: images are collected in multiple fluorescence channels after a round of readout chemistry, and this process is repeated until all fluorescent readouts have been imaged.  Similarly, the compuational processing pipelines to turn raw images into transcriptional profiles of cells share many computational steps. In this context, the SpaceTx Consortium pursued two software projects:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://spacetx-starfish.readthedocs.io/en/latest/help_and_reference/spacetx-format/SpaceTxFormat/index.html#sptx-format">SpaceTx-Format</a> is a fully-specified format for image-based spatial transcriptomics raw data, including spatial structure of images in 3D, description of round-channel organization and a specification for the “codebook” relating fluorescence images to gene identity.</p></li>
 <li><p><a class="reference external" href="https://spacetx-starfish.readthedocs.io/en/latest/index.html">starfish</a> is a Python package that provides processing modules that can be assembled into completel processing pipelines to extract mRNA locations for barcode methods (MERFISH, SEQFISH), sequencing-based readouts (ISS, FISSEQ) and non-barcoded readouts (osmFISH).</p></li>
 </ul>
 <p>Both of these projects are housed in the <a class="reference external" href="https://github.com/spacetx/starfish">starfish github repo</a> and can be cited using the <a class="reference external" href="https://joss.theoj.org/papers/10.21105/joss.02440">starfish article in Journal of Open Source Software</a>.</p>
+</section>
 </section>
 
 
@@ -102,7 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#experimental-methods">Experimental Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#cell-segmentation">Cell Segmentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#data-formatting-standards-and-computational-pipelines">Data Formatting Standards and Computational Pipelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#cell-type-mapping-and-combined-results">Cell Type Mapping and Combined Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis.html#data-visualization">Data Visualization</a></li>
 </ul>
 </li>

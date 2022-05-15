@@ -151,8 +151,123 @@
 </section>
 <section id="experimental-methods">
 <h2>Experimental Methods<a class="headerlink" href="#experimental-methods" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/mock_data_table.png"><img alt="_images/mock_data_table.png" src="_images/mock_data_table.png" style="width: 800px;" /></a>
-<p>SpaceTx Consortium data includes the following experimental methods:</p>
+<br>
+<div class="table-responsive"><table class="table text-break docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Experimental Method</p></th>
+<th class="head"><p>Multiplexed smFISH</p></th>
+<th class="head"><p>Allen MERFISH</p></th>
+<th class="head"><p>hybridization-based in situ sequencing</p></th>
+<th class="head"><p>ExSeq</p></th>
+<th class="head"><p>Visium</p></th>
+<th class="head"><p>BaristaSeq</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Readout mechanism</strong></p></td>
+<td><p>non-barcoded</p></td>
+<td><p>barcoded</p></td>
+<td><p>sequencing-based</p></td>
+<td><p>sequencing-based</p></td>
+<td><p>spatial barcoding, sequencing en mass</p></td>
+<td><p>sequencing-based</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Enzymatic Amplification</strong></p></td>
+<td><p>no</p></td>
+<td><p>no</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+<td><p>no readout imaging</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Publications</strong></p></td>
+<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30392798">https://www.ncbi.nlm.nih.gov/pubmed/30392798</a></p></td>
+<td></td>
+<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.02.03.931618v1">https://www.biorxiv.org/content/10.1101/2020.02.03.931618v1</a></p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1126/science.aax2656">https://doi.org/10.1126/science.aax2656</a></p></td>
+<td><p><a class="reference external" href="https://science.sciencemag.org/content/353/6294/78">https://science.sciencemag.org/content/353/6294/78</a>
+<a class="reference external" href="https://www.10xgenomics.com/products/spatial-gene-expression/">https://www.10xgenomics.com/products/spatial-gene-expression/</a></p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1093/nar/gkx1206">https://doi.org/10.1093/nar/gkx1206</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Number of genes</strong></p></td>
+<td><p>22</p></td>
+<td><p>254</p></td>
+<td><p>human: 120,
+mouse: 119</p></td>
+<td><p>mouse: 42</p></td>
+<td><p>Full transcriptome</p></td>
+<td><p>76</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Area Imaged</strong></p></td>
+<td><p>~3mm<sup>2</sup></p></td>
+<td><p>~1.9mm<sup>2</sup></p></td>
+<td><p>human: 26.6mm<sup>2</sup>,
+mouse: 53.6mm<sup>2</sup></p></td>
+<td><p>mouse: ~1mm<sup>2</sup></p></td>
+<td><p>6.5mm<sup>2</sup></p></td>
+<td><p>0.75 x 1.2 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tissue Thickness</strong></p></td>
+<td><p>10 μm</p></td>
+<td><p>10 μm</p></td>
+<td><p>10 μm</p></td>
+<td><p>20 μm</p></td>
+<td><p>10 μm</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>Detection Sensitivity (high: same order of magnitude as smFISH, medium: ~1 OoM lowerthan smFISH, low: more than 1 OoM counts per cell below smFISH)</strong></p></td>
+<td><p>high</p></td>
+<td><p>medium</p></td>
+<td><p>low</p></td>
+<td><p>medium</p></td>
+<td><p>n/a</p></td>
+<td><p>low</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Average Total Counts Per Cell</strong></p></td>
+<td><p>225</p></td>
+<td><p>919</p></td>
+<td><p>human: 38.6,
+mouse: 30</p></td>
+<td><p>mouse: 177 (for cells passing QC)</p></td>
+<td><p>n/a</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Cellular Spatial Resolution?</strong></p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+<td><p>subcellular</p></td>
+<td><p>no</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Reagent Cost Per Experiment (USD)</strong></p></td>
+<td></td>
+<td><p>500</p></td>
+<td></td>
+<td><p>500</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>Time Per Experiment</strong></p></td>
+<td><p>1 week</p></td>
+<td><p>24 hours imaging, 4 days sample prep after sectioning</p></td>
+<td><p>&lt; 1 week</p></td>
+<td><p>4 days (imaging); 1 week of sample prep prior</p></td>
+<td><p>~1 day</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><p>SpaceTx Consortium data includes the following experimental methods:</p>
 <ul class="simple">
 <li><p><strong>multiround smFISH</strong>: <a class="reference external" href="https://www.nature.com/articles/s41467-021-23807-4">SSAM paper</a></p></li>
 <li><p><strong>In-situ sequencing</strong>: <a class="reference external" href="https://academic.oup.com/nar/article/48/19/e112/5912821#282922333">hybISS paper</a></p></li>
@@ -170,13 +285,23 @@
 <p>Cell segmentation associates mRNA spot locations with individual cells, creating transcriptomic profiles that make up the cell-by-gene table.</p>
 <p><strong>SpaceTx Cell Segmentation Pipeline</strong></p>
 <ol class="arabic simple">
-<li><p>Feature-based nucleus segmentation based on DAPI is applied to stitched 2D volumes and consists of two steps: (i) foreground segmentation and (ii) its consecutive splitting into separate instances (nuclei). For the first task, simple thresholding, either by employing one of the many available thresholding methods or by fine-tuning the cutoff intensity value, was sufficient to segment the foreground in all the available data sets. Splitting of the foreground into separate instances is performed per connected component, which allows efficient parallelizable implementation of our method. Based on the observation that most nuclei have rather regular elliptical shape, we developed an approach inspired by the work of Bilgin et al. [1] than employs elliptic features to extract two types of information: (i) curvature maps whose local minima correspond to locations of separation lines between touching nuclei and (ii) markers cognitively describing shapes of the nuclei and defined as the regions with positive Gaussian curvature and negative mean curvature. Calculation of the curvature maps and the markers is guided by a scale parameter, one for each, the value of which is chosen experimentally based on the average nucleus size. The markers are consecutively turned into super-pixels by performing skeletonization on the foreground with subtracted markers region. Calculated super-pixels are progressively merged based on the inter-pixel similarity score for obtaining the final segmentation. The similarity between two neighbouring super-pixels is defined based on the average value of the curvature map in the region between the corresponding markers and is recalculated after each merging iteration. This process stops after the maximum value of the inter-pixel similarity does not exceed the predefined threshold (whose value was kept fixed for all the test data sets). The described algorithm that worked equally well on the entire variety of SpaceTX data, including DAPI channels of the fluorescence microscopy data as well as 10x Visium histopathology images.</p></li>
+<li><p>Feature-based nucleus segmentation based on DAPI is applied to stitched 2D volumes and consists of two steps: (i) foreground segmentation and (ii) its consecutive splitting into separate instances (nuclei).
+For the first task, simple thresholding, either by employing one of the many available thresholding methods or by fine-tuning the cutoff intensity value, was sufficient to segment the foreground in all the available data sets.
+Splitting of the foreground into separate instances is performed per connected component, which allows efficient parallelizable implementation of our method.
+Based on the observation that most nuclei have rather regular elliptical shape, we developed an approach inspired by the work of Bilgin et al. [1] than employs elliptic features to extract two types of information:
+(i) curvature maps whose local minima correspond to locations of separation lines between touching nuclei and (ii) markers cognitively describing shapes of the nuclei and defined as the regions with positive Gaussian curvature and negative mean curvature.
+Calculation of the curvature maps and the markers is guided by a scale parameter, one for each, the value of which is chosen experimentally based on the average nucleus size.
+The markers are consecutively turned into super-pixels by performing skeletonization on the foreground with subtracted markers region. Calculated super-pixels are progressively merged based on the
+inter-pixel similarity score for obtaining the final segmentation. The similarity between two neighbouring super-pixels is defined based on the average value of the curvature map in the region between
+the corresponding markers and is recalculated after each merging iteration. This process stops after the maximum value of the inter-pixel similarity does not exceed the predefined threshold
+(whose value was kept fixed for all the test data sets). The described algorithm that worked equally well on the entire variety of SpaceTX data, including DAPI channels of the fluorescence microscopy data as well as 10x Visium histopathology images.</p></li>
 <li><p>Augmented Cell Segmentation using Baysor. Using the nuclear segementation as a prior for cell location, Baysor assigned mRNA spots to cells probabilistically, including cell size and gene composition.</p></li>
 </ol>
 </section>
 <section id="data-formatting-standards-and-computational-pipelines">
 <h2>Data Formatting Standards and Computational Pipelines<a class="headerlink" href="#data-formatting-standards-and-computational-pipelines" title="Permalink to this headline">¶</a></h2>
-<p>Background</p>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
 <p>Many Spatial Transcriptomics methods are based on a common pattern of data acquisition: images are collected in multiple fluorescence channels after a round of readout chemistry, and this process is repeated until all fluorescent readouts have been imaged.  Similarly, the compuational processing pipelines to turn raw images into transcriptional profiles of cells share many computational steps. In this context, the SpaceTx Consortium pursued two software projects:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://spacetx-starfish.readthedocs.io/en/latest/help_and_reference/spacetx-format/SpaceTxFormat/index.html#sptx-format">SpaceTx-Format</a> is a fully-specified format for image-based spatial transcriptomics raw data, including spatial structure of images in 3D, description of round-channel organization and a specification for the “codebook” relating fluorescence images to gene identity.</p></li>
@@ -184,23 +309,20 @@
 </ul>
 <p>Both of these projects are housed in the <a class="reference external" href="https://github.com/spacetx/starfish">starfish github repo</a> and can be cited using the <a class="reference external" href="https://joss.theoj.org/papers/10.21105/joss.02440">starfish article in Journal of Open Source Software</a>.</p>
 </section>
-<section id="cell-type-mapping-and-combined-results">
-<h2>Cell Type Mapping and Combined Results<a class="headerlink" href="#cell-type-mapping-and-combined-results" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><strong>Cell Type Mapping</strong></p></li>
-</ul>
+<section id="cell-type-mapping">
+<h3>Cell Type Mapping<a class="headerlink" href="#cell-type-mapping" title="Permalink to this headline">¶</a></h3>
 <p>This is the first time spatial transcriptomics data has been analyzed and compared across methods for cell type determination. We developed approaches to combine multiple cell type mapping methods and applied them to data sets from five experimental methods.</p>
 <p>A primary output of segmentation in each of the image-based experimental methods is a table of putative cells which each have a count of the number of molecules per gene as well as a soma location.  In this section we present results for MERFISH, but can do the same for other methods.  Cells located outside of the primary visual cortex (VISp) based on expert annotation or that do not pass quality control filters are excluded from further analysis.</p>
 <blockquote>
 <div><p>We next aimed to assign a cell type and associated confidence to each putative cell based on gene molecule counts.  This was done using a combined analysis approach, where the strategies below were used to map cells to cell types from the taxonomy defined above, and the results of these strategies were then combined to produce a single combined cell type call with associated confidence score for each remaining cell.</p>
 </div></blockquote>
-<ul>
+<ul class="simple">
 <li><p>Annotation of VISp area for mapping
 Cell locations were visualized in Napari <a class="reference external" href="https://napari.org">https://napari.org</a> and manually
 annotated to contain the largest possible area of primary visual cortex.
 Layers were manually annotated based on cell density and gene expression.</p></li>
 <li><p>Cell Mapping strategies (including cell QC/filtering steps)</p>
-<ul class="simple">
+<ul>
 <li><p>QC criteria</p></li>
 <li><p>Baysor (Viktor Petukhov)  <a class="reference external" href="https://github.com/kharchenkolab/Baysor">Github repo</a>, <a class="reference external" href="https://www.nature.com/articles/s41587-021-01044-w">Nature Biotechnology (2021)</a> or <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.10.05.326777v1">BioRxiv preprint</a></p></li>
 <li><p>mFISHtools (Jeremy Miller) <a class="reference external" href="https://github.com/AllenInstitute/mfishtools/">Github repo</a></p></li>
@@ -210,23 +332,35 @@ Layers were manually annotated based on cell density and gene expression.</p></l
 <li><p>Yilin’s method [Yilin]</p></li>
 </ul>
 </li>
-<li><p><strong>Combination of mapping results</strong>
-- negative weighting
-- geometric median</p></li>
-<li><p><strong>Visium Data Single Cell Mapping</strong></p>
-<ul class="simple">
+</ul>
+</section>
+<section id="combination-of-mapping-results">
+<h3>Combination of mapping results<a class="headerlink" href="#combination-of-mapping-results" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>negative weighting</p></li>
+<li><p>geometric median</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="visium-data-single-cell-mapping">
+<h3>Visium Data Single Cell Mapping<a class="headerlink" href="#visium-data-single-cell-mapping" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
 <li><p>Visium is often described as unbiased and transcriptome-wide, since it’s not based on a priori selection of genes to be examined and targets all poly-adenlated transcripts. However, the current Visium platform does not provide single cell resolution and, though dependent on tissue, the common estimate is that approximately 1-10 cells contribute to the observed gene expression at each spot. The “mini-bulk” property of spots means that spots rarely can be assigned to a single cell type, and more common is to characterize these w.r.t. cell type compositions (e.g., proportion of cell types present at each location). For such purposes, several methods where single cell/nuclei data is used as a guide reference have been proposed, with the shared objective of decomposing the joint expression profiles observed in a spot into contributions from the cell types defined in the single cell/nuclei data.</p></li>
 <li><p><strong>stereoscope</strong> and <strong>Tangram</strong> were used to deconvolve the spatial Visium data using non-spatial single cell data, a procedure we refer to as “mapping” of the latter onto the former. In short, once presented with the Visium data, both these approaches will provide a proportion estimate of each cell type within every spot, thus allowing the spatial distribution of each cell type to be charted. Although the final products are similar, the two methods differ substantially in design; stereoscope relying on a probabilistic framework where both data modalities are modelled with a negative binomial distribution, while Tangram cast the the task more as a optimization problem where a map between single cells and spatial locations.</p></li>
 <li><p>For consistency, the cell type mapping analysis focuses on the small region that constitutes the VISp as shown in Figure 1; even though spatial gene expression data was generated from a larger part of the tissues (about half of a coronal mouse brain section fit onto the capture area). We aim to evaluate the mapping from each method, as well as comparing these two to each other. Nevertheless, establishing a ground truth for the proportion values is arguably even harder than for the cell type identities in the image-based methods, hence concurrence with well-known locations of cell types (e.g., Layer associated) will serve as the basis of our evaluation.</p></li>
 </ul>
-<a class="reference internal image-reference" href="_images/visium.png"><img alt="_images/visium.png" src="_images/visium.png" style="width: 800px;" /></a>
-<p><strong>Figure 1</strong> | A) zoom in on the regions of interests. Spots included in the analysis are marked on the tissue with black circles. The tissue edged to which distance is measured is indicated by a dashed red line. B) Pearson correlation values between cell type proportion estimates from stereoscope and Tangram. The star (*) on Meis2 indicates that this correlation did not have a significant p-value. C) Smoothed curves (loess smoothing) of the cell type proportions when plotted as a function of distance to the tissue edge (red in A).</p>
-<ul class="simple">
+</div></blockquote>
+<a class="reference internal image-reference" href="_images/visium.png"><img alt="_images/visium.png" src="_images/visium.png" style="width: 90%;" /></a>
+<p><strong>Figure 1</strong>. A) zoom in on the regions of interests. Spots included in the analysis are marked on the tissue with black circles. The tissue edged to which distance is measured is indicated by a dashed red line. B) Pearson correlation values between cell type proportion estimates from stereoscope and Tangram. The star (*) on Meis2 indicates that this correlation did not have a significant p-value. C) Smoothed curves (loess smoothing) of the cell type proportions when plotted as a function of distance to the tissue edge (red in A).</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>By computing the correlation (Pearsons’s r) between proportion estimates for each cell type it’s possible to quantitatively assess how results from the two methods relate. A  significant positive correlation between the proportion estimates could be observed for all cell types except Meis2, where the correlation was negative but also non-significant (p = 0.36), see Figure 1B.  High correlation values were observed for several of the layer types as well as Macrophages and Astrocytes. Most of the cell types with poor correlation were - according to the proportion estimates - lowly abundant in the tissue, implying mapping of rare cell types likely are more challenging to map and the result associated with higher uncertainty.</p></li>
 <li><p>Next, we were interested in how the different layer cell types were distributed along the axis orthogonal to the tissue edge, i.e., when travelling further into the tissue (blue arrow Figure 1A). We thus measured the shortest distance for every spot to the tissue edge and modelled the cell type proportion values as a function of this distance, loess (locally estimated scatterplot smoothing) curve smoothing was used to get a more continuous graph, and to better capture the general trends in the data, see Methods. The two methods by en large agreed; albeit not always unimodal, the cell type distributions had one dominant major mode - overlapping well across methods - and exhibited the expected right shift trend (layer types with higher numbers being more prevalent deeper into the cortex and vice versa), see Figure 1C. For some cell types, the distributions were multimodal indicating potential “mismapping”, still in the cases where both methods independently located these peaks at almost identical positions the explanation might be biological or experimental.</p></li>
 </ul>
-</li>
-</ul>
+</div></blockquote>
+</section>
 </section>
 <section id="data-visualization">
 <h2>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h2>
@@ -307,7 +441,6 @@ Layers were manually annotated based on cell density and gene expression.</p></l
 <li class="toctree-l2"><a class="reference internal" href="#experimental-methods">Experimental Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cell-segmentation">Cell Segmentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data-formatting-standards-and-computational-pipelines">Data Formatting Standards and Computational Pipelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cell-type-mapping-and-combined-results">Cell Type Mapping and Combined Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data-visualization">Data Visualization</a></li>
 </ul>
 </li>
