@@ -112,6 +112,19 @@ h6.hover .headerlink {
     line-height: 1.5;
 }
 
+@media screen and (min-width: 2200px) {
+    .scroll-top {
+        height: 800px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .scroll-top img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 1399px) {
     .cover-text {
         padding-top: 150px;
