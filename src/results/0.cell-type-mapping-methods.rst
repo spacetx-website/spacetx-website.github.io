@@ -1,8 +1,0 @@
-Cell Type Mapping Methods
--------------------------
-
-1. `FR-Match cell2cluster <https://jcventerinstitute.github.io/celligrate/>`_ `[results] <https://github.com/yunzhang813/SpaceTx-cell-type-calling>`_ [example code]
-2. `pciSEQ <https://github.com/acycliq/pciSeq>`_ [results] [example code]
-3. `mFISHtools <https://github.com/AllenInstitute/mfishtools/>`_ [results] [example code]
-4. `Baysor <https://github.com/kharchenkolab/Baysor>`_ [results] [example code]
-5. `Tangram <https://github.com/broadinstitute/Tangram>`_ [results] [example code]
